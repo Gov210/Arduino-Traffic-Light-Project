@@ -1,0 +1,31 @@
+int greenLightPin = 3;
+int yellowLightPin = 5;
+int redLightPin = 7;
+
+void setup(){
+    pinMode(greenLightPin, OUTPUT);
+    pinMode(yellowLightPin, OUTPUT);
+    pinMode(redLightPin, OUTPUT);
+}
+
+void loop(){
+  //green light, yellow light off
+    digitalWrite(greenLightPin, LOW);
+    digitalWrite(yellowLightPin, LOW);
+
+    //red light on, delay, red light off
+    digitalWrite(redLightPin, HIGH);
+    delay(5500);
+    digitalWrite(redLightPin, LOW);
+
+    //green light on, delay, off
+    digitalWrite(greenLightPin, HIGH);
+    delay(5500);
+    digitalWrite(greenLightPin, LOW);
+
+    //yellow light on, delay, off
+    digitalWrite(yellowLightPin, HIGH);
+    delay(3000);
+    digitalWrite(yellowLightPin, LOW);
+    //repeat
+}
